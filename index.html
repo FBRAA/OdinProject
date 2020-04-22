@@ -3,7 +3,7 @@
     <body>
        
         <script> 
-        let playerSelection = `ROCK`;
+        let playerSelection = prompt `Write rock, paper or scissors`;
         playerSelection = playerSelection.toLowerCase();
         const choices = [`rock`, `paper`, `scissors`] ;
        // const computerSelection = choices[getRandomInt(3)];
@@ -48,6 +48,30 @@
             }
             
         }
+    function game() {
+        let counter = 0;
+        for (let i=0; i<5; i++) {
+            let playerSelection = prompt `Write rock, paper or scissors`;
+            if (singleRound() == "Draw! Try again!") {
+                counter ++;
+            }
+        }
+        switch (counter) {
+            case 0:
+            case 1:
+            case 2:    
+                return `Congratulations, you've failed only ${counter}! You're the Winner!`;
+                break;
+            case 3:
+            case 4:
+            case 5:
+                return `SICKENIN' LOSS! Dummy, the computer is stronger! You've failed ${counter}.`;
+
+            default:
+                break;
+        }
+    }
+       // alert (singleRound());
         </script>
      </body>
  </html> 
