@@ -13,7 +13,7 @@
             }
             return choices[getRandomInt(3)];
         }
-        function singleRound(){
+        function playSingleRound(){
             
             switch(playerSelection){
                 case `rock`:
@@ -48,7 +48,7 @@
             }
             
         }
-    function game() {
+    function playGame() {
         let counter = 0;
         for (let i=0; i<5; i++) {
             let playerSelection = prompt `Write rock, paper or scissors`;
