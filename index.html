@@ -3,8 +3,6 @@
     <body>
        
         <script> 
-        let playerSelection = prompt `Write rock, paper or scissors`;
-        playerSelection = playerSelection.toLowerCase();
         const choices = [`rock`, `paper`, `scissors`] ;
         function computerSelection() 
         {
@@ -16,7 +14,8 @@
         }
         function playSingleRound()
         {
-            
+            let playerSelection = prompt `Write rock, paper or scissors`;
+            playerSelection = playerSelection.toLowerCase();
             switch(playerSelection)
             {
                 case `rock`:
@@ -58,8 +57,7 @@
         let counter = 0;
         for (let i=0; i<5; i++) 
         {
-            let playerSelection = prompt `Write rock, paper or scissors`;
-            if (singleRound() == "Draw! Try again!") {
+            if (playSingleRound() == "Draw! Try again!") {
                 counter ++;
             }
         }
