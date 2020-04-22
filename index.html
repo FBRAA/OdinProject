@@ -6,37 +6,42 @@
         let playerSelection = prompt `Write rock, paper or scissors`;
         playerSelection = playerSelection.toLowerCase();
         const choices = [`rock`, `paper`, `scissors`] ;
-       // const computerSelection = choices[getRandomInt(3)];
-        function computerSelection() {
-           function getRandomInt(max) {
+        function computerSelection() 
+        {
+           function getRandomInt(max) 
+            {
              return Math.floor(Math.random() * Math.floor(max));
             }
             return choices[getRandomInt(3)];
         }
-        function playSingleRound(){
+        function playSingleRound()
+        {
             
-            switch(playerSelection){
+            switch(playerSelection)
+            {
                 case `rock`:
-                    if (computerSelection() == `paper`) {
+                    if (computerSelection() == `paper`) 
+                    {
                         return  `You Lose! Paper beats Rock`;
                     } else if (computerSelection() == `scissors`) {
                         return  `You Win! Rock beats Scissors`
                     } else {
                         return  `Draw! Try again!`
                     }
-            
-                    break;
+                break;
                  case `paper`:
-                 if (computerSelection() == `paper`) {
+                 if (computerSelection() == `paper`) 
+                    {
                     return `Draw! Try again!`
                     } else if (computerSelection() == `scissors`) {
                         return  `You Lose! Scissors beat Paper`
                     } else {
                         return   `You Win! Paper beats Rock`
                     }
-                    break;
+                break;
                 case `scissors`:
-                if (computerSelection() == `paper`) {
+                if (computerSelection() == `paper`) 
+                    {
                     return   `You Win! Scissors beat Paper`
                     } else if (computerSelection() == `scissors`) {
                         return   `Draw! Try again!` 
@@ -48,15 +53,18 @@
             }
             
         }
-    function playGame() {
+    function playGame() 
+    {
         let counter = 0;
-        for (let i=0; i<5; i++) {
+        for (let i=0; i<5; i++) 
+        {
             let playerSelection = prompt `Write rock, paper or scissors`;
             if (singleRound() == "Draw! Try again!") {
                 counter ++;
             }
         }
-        switch (counter) {
+        switch (counter) 
+        {
             case 0:
             case 1:
             case 2:    
